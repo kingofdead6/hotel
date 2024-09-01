@@ -1,0 +1,340 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(240, 228, 210);
+}
+
+header {
+    background-color: rgb(240, 228, 210);
+    padding: 45px 0;
+    position: fixed;
+    width: 100%;
+    top: -100px;
+    z-index: 1000;
+    transition: top 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #e67e22;
+}
+
+.logo {
+    position: absolute;
+    right: 750px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.location {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.location img {
+    max-height: 40px;
+}
+
+.btn-booking {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1em;
+    margin-left: 15px;
+}
+
+.btn-booking:hover {
+    background-color: black;
+    color: white;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/hotelmainpic.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-hero {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.btn-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.btn-hero:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-hero:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.btn-heros {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.btn-heros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: aliceblue;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.btn-heros:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-heros:hover {
+    color: rgb(255, 255, 255);
+}
+
+header.hidden {
+    top: -100px;
+}
+
+header.hidden ~ .btn-hero {
+    display: none;
+}
+
+.show-header {
+    top: 0;
+}
+
+.show-header ~ .btn-hero {
+    display: block;
+}
+
+.moving-text {
+    background-color: rgb(240, 228, 210);
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 50px;
+}
+
+.moving-text p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 20%;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* banners section */
+.banners {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px;
+    margin: 20px;
+}
+
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+}
+
+.banner a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+    z-index: -1; /* Place image behind text */
+    position: absolute; /* Position behind the text */
+    top: 0;
+    left: 0;
+}
+
+.banner:hover .image-container {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.banner h2 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 1; /* Keep text above the image */
+}
+
+/* Style for h6 text */
+/* Style for h6 text */
+.banner h6 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+    padding-bottom: 5px;
+    align-self: flex-end;
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+}
+
+/* Create underline using pseudo-element */
+.banner h6::after {
+    content: ''; /* No text content */
+    display: block;
+    width: 100%; /* Full width by default */
+    height: 2px; /* Height of the underline */
+    background-color: white;
+    transition: width 0.3s ease; /* Smooth transition for width */
+    margin-top: 5px; /* Space between text and underline */
+    position: absolute; /* Position it relative to h6 */
+    bottom: 0; /* Align to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to the center */
+}
+
+/* Hover effect for h6 text */
+.banner h6:hover::after {
+    width: 30%; /* Reduce underline width on hover */
+}
+
+
+.rooms-and-suits .image-container {
+    background-image: url('../images/rooms.jpg');
+}
+
+.le-grands-dictionere .image-container {
+    background-image: url('../images/restaurant.jpg');
+}
+
+.bar-le-1802 .image-container {
+    background-image: url('../images/bar.jpg');
+}
+
+.wellness .image-container {
+    background-image: url('../images/pool.jpg');
+}
