@@ -8,13 +8,17 @@
 </head>
 <body>
     <!-- Header -->
+   
+
     <header>
         <nav>
             <ul>
                 <li>
-                    <div class="menu">
+                    <div class="menu" id="menuToggle" onclick="toggleMenu()">
+                        <a href="#Menu">
                         <img src="assets/images/menu.png" alt="Hotel Monte Cristo Paris">
                         <a href="#Menu">Menu</a>
+                       </a>
                     </div>
                 </li>
                 <li>
@@ -36,6 +40,26 @@
             </ul>
         </nav>
     </header>
+    <<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+    <!-- Close Button -->
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <ul>
+        <li class="big"><a href="#">Monte Cristo</a></li>
+        <li class="big"><a href="#">Suites & Rooms</a></li>
+        <li class="big"><a href="#">Bar 1802</a></li>
+        <li class="big"><a href="#">Dining</a></li>
+        <li class="big"><a href="#">Wellness</a></li>
+        <li class="big"><a href="#">Private Events</a></li>
+        <li class="small"><a href="#">Offers</a></li>
+        <li class="small"><a href="#">Gift Vouchers</a></li>
+        <li class="small"><a href="#">Photo Gallery</a></li>
+        <li class="small"><a href="#">Events</a></li>
+        <li class="small"><a href="#">Location</a></li>
+        <li class="small"><a href="#">3D Tour</a></li>
+        <li class="logohere"><a href="#"><img src="assets/images/logo.png" ></a></li>
+    </ul>
+</div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -80,22 +104,125 @@
             </a>
         </div>
     </section>
-    
-    
+    <section id="writing" class="writing">
+        <img id="logo2" src="assets/images/logo.png">
+        <h2>Hotel Monte Cristo</h2>
+        <h4>A Parisian story</h4>
+        <h6>Alexandre DUMAS is, like Victor Hugo, one of the most important 19th century French writers. In addition to being</h6>
+        <h6>a novelist he was a playwright, politician, adventurer, seducer, cook, traveller ...</h6>
+        <br>
+        <h6>He embraced experience and yearned to try everything!</h6>
+        <br>
+        <h6>Our hotel is an updated representation of what the great man's home might have been like had he been working</h6>
+        <h6>today.</h6>
 
+    </section>
+    
+    <section id="rooms" class="rooms">
+        <h1>Rooms & Suites</h1>
+        <div>
+            <a href="#">
+                <img src="assets/images/room1.png">
+            </a>
+        </div>
+        <h2>
+            <span class="title">Suites</span>
+            <span class="line"></span>
+            <span class="size">Up to 38 m²</span>
+            <span class="people">2 people</span>
+        </h2>
+
+
+        <div class="rooms-section">
+            <div class="room-item">
+                <img src="assets/images/1802.png" alt="Room 1802">
+             
+                <h1>1802</h1>
+                <p id="begening">Up to 24 m²  </p>
+                <p id="ending"> 2 people</p>
+            </div>
+            <div class="room-item">
+                <img src="assets/images/room2.png" alt="Rooms">
+                <h1>Rooms</h1>
+                <p id="begening">Up to 24 m²</p>
+                <p id="ending">2 people</p>
+            </div>
+            <div class="room-item">
+                <img src="assets/images/boudoir.png" alt="Boudoirs">
+                <h1>Boudoirs</h1>
+                <p id="begening">Up to 14 m²</p>
+                <p id="ending">2 people</p>
+            </div>
+        </div>
+        
+        
+        
+    </section>
    
-
+    <<section id="about-bar" class="about-bar">
+        <div class="text-content">
+            <h1>Bar 1802</h1>
+            <h4>Our project is to (re)discover or enjoy together spirits offering an unlimited aromatic palette.</h4>
+            <h6>Welcome to the largest rum bar in France (over 1600 references). The 1802 is in constant search to offer you a complete selection.</h6>
+            <a href="#">Discover</a>
+        </div>
+        <img src="assets/images/barreviw.png" alt="Bar Image">
+    </section>
+    
   
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Hotel Monte Cristo Paris. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://twitter.com">Twitter</a>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <h1>HOTEL MONTE CRISTO PARIS</h1>
+                <p>20 - 22 Rue Pascal, 75005 Paris</p>
+                <p>+33 1 40 09 09 09</p>
+                <p><a href="mailto:reservation@hotelmontecristoparis.com">reservation@hotelmontecristoparis.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="assets/images/tiktok-icon.png" alt="TikTok"></a>
+                    <a href="#"><img src="assets/images/linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <p><a href="#">Press</a></p>
+                <p><a href="#">Legal Notice</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Manage cookies</a></p>
+            </div>
+            <div class="footer-right">
+                <a href="#">ENGLISH <span>&#9662;</span></a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <p><i>Discover the hotels that are part of the Hôteliers Impertinents collection.</i></p>
+            <div class="hotel-logos">
+                <img src="assets/images/logo.png" alt="Hotelier Impertinents Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <div class="footer-hotels">
+                    <p>COQ Hôtel</p>
+                    <p>La Mission</p>
+                    <p>La Conversation</p>
+                    <p>La Belle Ville Paris</p>
+                </div>
+                <div class="footer-hotels">
+                    <p>Hôtel L'Antoine</p>
+                    <p>Bar 1802</p>
+                    <p>Le Grand Dictionnaire</p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>Amadeus (1A) = YX : PARMCO - Sabre (AA) = YX : 353840 - Galileo / Apollo (UA) = YX : F7739 - Worldspan (1P) = YX : ORYMC - DHISCO (WB) = YX : 10409 - Travelweb (HD) = YX : 10409</p>
+                <p>Official website – All rights reserved. Hotel Monte Cristo Paris © 2024</p>
+                <p>Design & production: <a href="#">Agence WEBCOM</a></p>
+            </div>
         </div>
     </footer>
+    
+    
 
     <script src="assets/js/script.js"></script>
 </body>
