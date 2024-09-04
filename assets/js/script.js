@@ -17,3 +17,12 @@ window.addEventListener('scroll', handleScroll);
 
 // Initial check to ensure correct header state on page load
 handleScroll();
+
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-500px'; // Hide sidebar
+    } else {
+        sidebar.style.left = '0px'; // Show sidebar
+    }
+}
