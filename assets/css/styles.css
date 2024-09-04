@@ -44,14 +44,14 @@ nav ul {
 }
 
 .menu a {
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.789);
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #e67e22;
+    color: #000000;
 }
 
 .logo {
@@ -232,6 +232,78 @@ header.hidden ~ .btn-hero {
         transform: translateX(-100%);
     }
 }
+    .sidebar {
+        position: fixed;
+        left: -1000px; 
+        top: 0;
+        width: 500px;
+        height: 100%;
+        background-color: rgb(240, 228, 210);
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+        z-index: 1001; 
+    }
+    
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .sidebar ul li {
+        padding: 8px 16px;
+        text-align: left;
+    }
+    
+    .sidebar ul li a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.381);
+        display: block;
+        font-weight: bolder;
+        transition: 0.3s;
+        padding-left: 50px;
+    }
+    
+    .sidebar ul li a:hover {
+        color: #000000;
+    }
+    
+    .big a {
+        font-size: 40px; 
+    }
+    
+    .small a {
+        font-size: 28px; 
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: transparent;
+        border: none;
+        color: rgba(0, 0, 0, 0.426);
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 1002; 
+    }
+    
+    .close-btn:hover {
+        color: #000000;
+    }
+    .logohere {
+        position: absolute; /* Allows precise positioning */
+        bottom: 150px; /* Position the logo 20px from the bottom */
+        right: 50px; /* Position the logo 20px from the right */
+    }
+    
+    .logohere a img {
+        max-width: 80px; /* Adjust the size of the logo as needed */
+        height: auto;
+        display: block; /* Ensures the image fits properly in its container */
+    }
+    
+
 
 /* banners section */
 .banners {
@@ -338,3 +410,329 @@ header.hidden ~ .btn-hero {
 .wellness .image-container {
     background-image: url('../images/pool.jpg');
 }
+
+
+.writing {
+    text-align: center; /* Center-aligns all text */
+    color: black; /* Sets the text color to black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Adds padding around the content */
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+.writing img#logo2 {
+    max-width: 150px; /* Sets a maximum width for the logo */
+    height: auto;
+    margin-bottom: 20px; /* Adds space below the logo */
+}
+
+.writing h2 {
+    font-weight: bold; /* Makes h2 bolder */
+    font-size: 50px;
+    margin: 0;
+}
+
+.writing h4 {
+    font-weight: bold; /* Makes h4 bolder */
+    font-size: 50px;
+    margin: 0;
+}
+
+.writing h6 {
+    font-weight: normal; /* Normalizes the weight of h6 */
+    margin: 5px 0; /* Adds margin for spacing */
+    font-size: 18px;
+}
+/*ROOMS*/
+/* Section Styling */
+.rooms {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+  background-color: rgb(255, 248, 238); /* Light background color for the section */
+  max-width: 1200px; /* Set the maximum width of the container */
+  margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .rooms > div {
+    text-align: center; /* Center the image */
+    margin-bottom: 20px;
+  }
+  
+  .rooms img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto;
+  }
+  
+  /* Styling for h2 */
+  h2 {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    width: 2000px;
+    padding-bottom: 50px;
+  }
+  
+  .title {
+    text-align: left;
+    margin-right: 10px; /* Space between title and the line */
+  }
+  
+  .line {
+    height: 1px;
+    background-color: black;
+    flex-grow: 1; /* Allows the line to expand to fill available space */
+    margin: 0 10px; /* Space on both sides of the line */
+  }
+  
+  .size {
+    margin-right: 50px; /* Space between size and people */
+  }
+  
+  .people {
+    flex: 1;
+  }
+  
+  .rooms-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.room-item {
+    width: 30%;
+    text-align: left; /* Aligns text to the left */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.room-item img:hover {
+    transform: scale(1.1); /* Enlarges the image on hover */
+}
+
+.room-item h1 {
+    font-size: 1.5em;
+    margin: 0; /* Removes any extra margin */
+    color: #333; /* Dark text */
+    border-bottom: 1px solid black; /* Adds a black line below the <h1> */
+    padding-bottom: 5px; /* Adds space between the text and the line */
+    display: flex;
+    margin-top: 10px; /* Adjusts the margin above to align with the image */
+}
+
+.room-item p {
+    
+    justify-content: space-between; /* Space out the paragraphs */
+}
+
+#begening {
+    /* Aligns the first paragraph to the left */
+    text-align: left;
+}
+
+#ending {
+    /* Aligns the second paragraph to the right */
+    text-align: right;
+}
+
+
+
+.about-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.text-content {
+    max-width: 50%; /* Ensure text doesn't take up too much space */
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px; /* Adds space between the text and the limit lines */
+    margin-left: 200px ;
+}
+
+
+.about-bar h1 {
+    width: 55%;
+    margin-top: 200px;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about-bar h4 {
+    margin-right: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about-bar h6 {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.about-bar a {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    display: inline-block;
+}
+
+.about-bar img {
+    max-width: 50%; /* Ensure image doesn't take up too much space */
+    height: auto;
+    margin-left: 150px; /* Space between text and image */
+}
+
+
+
+
+
+
+.footer {
+    background-color: #f5ebdb;
+    padding: 40px 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-left h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-left a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-center {
+    text-align: right;
+}
+
+.footer-center p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-center a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+}
+
+.footer-middle {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-middle p {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-middle .hotel-logos img {
+    max-width: 120px;
+    height: auto;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.footer-hotels {
+    margin-right: 60px;
+}
+
+.footer-hotels p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-info {
+    text-align: right;
+    font-size: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
